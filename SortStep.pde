@@ -1,5 +1,5 @@
-private int numInts = 800;
-private int largestInt = 100;
+private int numInts = 10000;
+private int largestInt = Integer.MAX_VALUE;
 private int [] myArray= new int[numInts];
 private Stopwatch watch = new Stopwatch();
 private Sorts mySorts = new Sorts();
@@ -9,6 +9,10 @@ public void setup()
   selectionSortTest();
   insertionSortTest();
   mergeSortTest();
+  /*for(int i=0;i<myArray.length;i++)
+  {
+    print(myArray[i]+", ");
+  }*/
 }
 public void draw(){
   //empty!
