@@ -13,9 +13,9 @@ public class Stopwatch {
     stop=System.nanoTime();
   }
   public long elapsedTime()
-    /* uses System.out to display the elapsed time in seconds */
+    /* uses System.out to display the elapsed time in nanoseconds */
   {
-    return (stop-start)/1000;
+    return stop-start;
   }
   public void reset()
     /* resets the elapsed time to 0 */
