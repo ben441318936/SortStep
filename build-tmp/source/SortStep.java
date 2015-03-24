@@ -17,22 +17,18 @@ import java.io.IOException;
 public class SortStep extends PApplet {
 
 
-private int numInts = 11;
+private int numInts = 6;
 private int largestInt = numInts;
 private int [] myArray= new int[numInts];
 private Stopwatch watch = new Stopwatch();
 private Sorts mySorts = new Sorts();
-private int [] a1= new int[numInts];
-private int [] a2= new int[numInts];
-private int [] a3= new int[numInts];
-private int [] a4= new int[numInts];
 
 public void setup()
 {
-  //bubbleSortTest();
-  //selectionSortTest();
-  //insertionSortTest();
-  mergeSortTest();
+  bubbleSortTest();
+  selectionSortTest();
+  insertionSortTest();
+  //mergeSortTest();
 }
 public void draw(){
   //empty!

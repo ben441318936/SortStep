@@ -15,6 +15,7 @@ public class Sorts
           list[inner+1]=temp;
         }
       }
+      System.out.println(Arrays.toString(list));
     }
   }
 
@@ -32,6 +33,7 @@ public class Sorts
       temp=list[outer];
       list[outer]=list[flag];
       list[flag]=temp;
+      System.out.println(Arrays.toString(list));
     }
   }
 
@@ -47,6 +49,7 @@ public class Sorts
         position--;
       }
       list[position]=key;
+      System.out.println(Arrays.toString(list));
     }
   }
 
@@ -79,11 +82,8 @@ public class Sorts
     {
       int mid=(first+last)/2;
       mergeSort(a,first, mid);
-      System.out.println(Arrays.toString(a));
       mergeSort(a,mid+1,last);
-      System.out.println(Arrays.toString(a));
       merge(a,first,mid+1,last);
-      System.out.println(Arrays.toString(a));
     }
   } 
 }
