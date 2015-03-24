@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.util.Arrays;
 public class Sorts
 {
   public void bubbleSort(int[] list)
@@ -21,11 +21,9 @@ public class Sorts
   public void selectionSort(int[] list)
   {
     int flag,temp;
-    for(int outer=0;outer<list.length-1;outer++)
-    {
+    for(int outer=0;outer<list.length-1;outer++){
       flag=outer;
-      for(int inner=outer+1;inner<list.length;inner++)
-      {
+      for(int inner=outer+1;inner<list.length;inner++){
         if(list[inner]<list[flag])
         {
           flag=inner;
@@ -54,12 +52,35 @@ public class Sorts
 
   private void merge(int[] a, int first, int mid, int last)
   {
-    //your code here
+    int[] temp=new int[last-first+1];
+    int midRef=mid;
+    int f=first;
+    int m=mid;
+    int l=last;
+    for(int i=0;i<temp.length;i++){
+      if((f<midRef) && (m>l || a[f] < a[m])){
+        temp[i]=a[f];
+        f++;
+      }
+      else { 
+        temp[i]=a[m];
+        m++;
+      }
+    }
+      
+    for(int i = 0; i<temp.length; i++){
+      a[i+first]=temp[i];
+    }
   }
 
   public void mergeSort(int[] a, int first, int last)
   {
-    //your code here
-  }
+    if(first<last)
+    {
+      int mid=(first+last)/2;
+      mergeSort(a,first, mid);
+      mergeSort(a,mid+1,last);
+      merge(a,first,mid+1,last);
+    }
+  } 
 }
-
