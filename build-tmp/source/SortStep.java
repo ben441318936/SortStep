@@ -17,7 +17,7 @@ import java.io.IOException;
 public class SortStep extends PApplet {
 
 
-private int numInts = 6;
+private int numInts = 100000;
 private int largestInt = numInts;
 private int [] myArray= new int[numInts];
 private Stopwatch watch = new Stopwatch();
@@ -28,7 +28,7 @@ public void setup()
   bubbleSortTest();
   selectionSortTest();
   insertionSortTest();
-  //mergeSortTest();
+  mergeSortTest();
 }
 public void draw(){
   //empty!

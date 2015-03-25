@@ -1,5 +1,5 @@
 import java.util.Arrays;
-private int numInts = 6;
+private int numInts = 1000;
 private int largestInt = numInts;
 private int [] myArray= new int[numInts];
 private Stopwatch watch = new Stopwatch();
@@ -10,7 +10,7 @@ public void setup()
   bubbleSortTest();
   selectionSortTest();
   insertionSortTest();
-  //mergeSortTest();
+  mergeSortTest();
 }
 public void draw(){
   //empty!
@@ -61,8 +61,8 @@ public void mergeSortTest()
 }
 private void fillArray(int numInts, int largestInt)
 {
-  /*for (int i = 0; i < myArray.length; i++)
+  for (int i = 0; i < myArray.length; i++)
   {
     myArray[i] = (int)(Math.random()*largestInt + 1);
-  }*/
+  }
 }
